@@ -1,46 +1,165 @@
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    max-width: 800px;
+    /* Set a max width for the content */
+    margin: auto;
+    /* Center the content */
+    padding: 20px;
+    /* Add padding around the content */
+    background-color: white;
+    /* Set background color to white */
+    color: black;
+    /* Set text color to black */
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    /* Align items vertically centered */
+    justify-content: center;
+    /* Center all items horizontally */
+    flex-direction: column;
+    /* Stack elements vertically */
     text-align: center;
+    /* Center text */
+    max-width: 700px;
+    /* Set a max-width for the header */
+    margin: 0 auto;
+    /* Center the header in the page */
+}
+
+.profile-pic {
+    width: 100px;
+    /* Adjust the size as needed */
+    height: 100px;
+    /* Adjust the size as needed */
+    border-radius: 50%;
+    /* Makes it circular */
+    background-color: #ccc;
+    /* Placeholder color */
+    background-image: url('images/your_photo.jpg');
+    /* Replace with your photo path */
+    background-size: cover;
+    /* Ensures the photo covers the circle */
+    background-position: center;
+    /* Centers the photo */
+}
+
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.8em;
+    text-align: center;
+    /* Center align the section titles */
+    margin-bottom: 10px;
+    /* Add space below the titles */
+}
+
+p,
+ul {
+    margin: 0;
 }
 
 ul {
     list-style-type: none;
-    padding: 0;
-    margin: 20px;
+    /* Remove bullet points for titles */
+    padding-left: 0;
+    /* Remove padding for lists */
 }
 
-ul li {
-    margin: 10px 0;
+.education-entry,
+.experience-entry,
+.project-entry {
+    display: flex;
+    /* Use flexbox for layout */
+    justify-content: space-between;
+    /* Space between title and date */
+    align-items: center;
+    /* Center items vertically */
 }
 
-ul li a {
-    color: #333;
-    text-decoration: none;
-    font-size: 1.2em;
+.date {
+    margin-left: auto;
+    /* Push the date to the right */
+    font-style: italic;
+    font-weight: bold;
 }
 
-ul li a:hover {
-    color: #007BFF;
+/* Experience and Project Entry Titles */
+.experience-entry strong,
+.project-entry strong {
+    font-size: 1.35em;
+    /* Increase the size of the experience/project titles */
 }
 
-main {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
+.experience-entry p,
+.project-entry ul li {
+    font-size: 1em;
+    /* Set a smaller size for descriptions */
 }
 
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
+    margin-top: 20px;
+}
+
+hr {
+    border: 1px solid #ccc;
+    /* Adjust the color of the line */
+    margin: 20px 0;
+    /* Space above and below the line */
+}
+
+/* Link Styles */
+a {
+    color: #0077cc;
+    /* Change link color to a blue */
+    text-decoration: none;
+    /* Remove underline from links */
+}
+
+a:hover {
+    text-decoration: underline;
+    /* Add underline on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 800px) {
+    body {
+        padding: 10px;
+        /* Reduce padding on smaller screens */
+    }
+
+    h1 {
+        font-size: 2em;
+        /* Adjust heading size */
+    }
+
+    h2 {
+        font-size: 1.5em;
+        /* Adjust section title size */
+    }
+
+    .experience-entry strong,
+    .project-entry strong {
+        font-size: 1.2em;
+        /* Adjust project and experience titles */
+    }
+
+    .experience-entry p,
+    .project-entry ul li {
+        font-size: 0.9em;
+        /* Adjust description size */
+    }
+
+    hr {
+        margin: 15px 0;
+        /* Reduce margins for horizontal rules */
+    }
 }
